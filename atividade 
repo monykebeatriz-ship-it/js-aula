@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9 - JavaScript I</title>
+</head>
+<body>
+
+    <h1>Atividade 9 - JavaScript I</h1>
+    <h2>Fundamentos de JavaScript</h2>
+
+    <p>Desenvolvimento de Aplicações Web I - IFPB</p>
+
+    <p>Abra o Console do navegador para visualizar os resultados.</p>
+
+    <script>
+
+        console.log("JavaScript carregado!");
+
+        // PARTE 2 - VARIÁVEIS E TIPOS
+
+        const nomeAluno = "Monyke Beatriz";
+        let idade = 20;
+        const matriculado = true;
+
+        console.log("Nome:", nomeAluno);
+        console.log("Idade:", idade);
+        console.log("Matriculado:", matriculado);
+
+        console.log("Tipo do nome:", typeof nomeAluno);
+        console.log("Tipo da idade:", typeof idade);
+        console.log("Tipo de matriculado:", typeof matriculado);
+
+
+        // PARTE 3 - OPERADORES
+
+        const numero1 = 10;
+        const numero2 = 5;
+
+        console.log("Soma:", numero1 + numero2);
+        console.log("Subtração:", numero1 - numero2);
+        console.log("Multiplicação:", numero1 * numero2);
+        console.log("Divisão:", numero1 / numero2);
+        console.log("Resto da divisão:", numero1 % numero2);
+
+        console.log("O primeiro número é maior?", numero1 > numero2);
+        console.log("Os números são estritamente iguais?", numero1 === numero2);
+
+
+        // PARTE 4 - ENTRADA E CONVERSÃO
+
+        const n1 = Number(prompt("Digite o primeiro número:"));
+        const n2 = Number(prompt("Digite o segundo número:"));
+
+        console.log("Soma dos números:", n1 + n2);
+        console.log("Tipo de n1:", typeof n1);
+        console.log("Tipo de n2:", typeof n2);
+
+        console.log("Primeiro número válido:", !Number.isNaN(n1));
+        console.log("Segundo número válido:", !Number.isNaN(n2));
+
+
+        // PARTE 5.1 - MAIORIDADE
+
+        const idadeUsuario = Number(prompt("Digite sua idade:"));
+
+        if (idadeUsuario >= 18) {
+            console.log("Maior de idade");
+        } else {
+            console.log("Menor de idade");
+        }
+
+
+        // PARTE 5.2 - CLASSIFICAÇÃO DE NOTA
+
+        const nota = Number(prompt("Digite uma nota de 0 a 100:"));
+
+        if (Number.isNaN(nota) || nota < 0 || nota > 100) {
+            console.log("Nota inválida");
+        } else if (nota >= 90) {
+            console.log("Excelente");
+        } else if (nota >= 70) {
+            console.log("Aprovado");
+        } else {
+            console.log("Reprovado");
+        }
+
+
+        // PARTE 5.3 - NÚMERO PAR OU ÍMPAR
+
+        const numero = Number(prompt("Digite um número inteiro:"));
+
+        if (!Number.isInteger(numero)) {
+            console.log("Digite um número inteiro válido");
+        } else if (numero % 2 === 0) {
+            console.log("Número par");
+        } else {
+            console.log("Número ímpar");
+        }
+
+
+        // PARTE 6 - DEPURAÇÃO
+
+        // Problemas corrigidos:
+        // 1. Utilizado Number() para converter a idade.
+        // 2. Utilizado === para comparação.
+        // 3. Corrigido Idade para idade.
+        // 4. Adicionado ponto e vírgula.
+
+        const idadeTeste = Number(prompt("Digite uma idade:"));
+
+        if (idadeTeste === 18) {
+            console.log("Tem exatamente 18 anos");
+        } else {
+            console.log("Idade diferente de 18");
+        }
+
+        console.log(idadeTeste);
+
+
+        // DESAFIO FINAL - SITUAÇÃO DO ALUNO
+
+        const nome = prompt("Digite o nome do aluno:");
+
+        const nota1 = Number(prompt("Digite a primeira nota:"));
+
+        const nota2 = Number(prompt("Digite a segunda nota:"));
+
+        const media = (nota1 + nota2) / 2;
+
+        let situacao;
+
+        if (media >= 70) {
+            situacao = "Aprovado";
+        } else {
+            situacao = "Reprovado";
+        }
+
+        console.log(`Aluno: ${nome} | Média: ${media} | Situação: ${situacao}`);
+
+        alert(
+            `Aluno: ${nome}
+Média: ${media}
+Situação: ${situacao}`
+        );
+
+    </script>
+
+</body>
+</html>
